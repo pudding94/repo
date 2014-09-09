@@ -26,7 +26,7 @@ public class UserController {
 	@RequestMapping()
 	public  String redirectToUser(){
 		  System.out.println("redirect to user.jsp");
-	      return "view/user.jsp";//forward
+	      return "page/user.jsp";//forward
 //		  return "redirect:http://www.baidu.com"; 
 	}
 	@RequestMapping(value="/addUser") 
