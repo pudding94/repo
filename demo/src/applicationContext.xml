@@ -11,14 +11,6 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <context:component-scan base-package="com"/>
-	<mvc:annotation-driven/>
-<!-- 	<mvc:resources mapping="/js/*" location="/js/"/>   -->
-<!-- 	<mvc:resources mapping="/css/**" location="/css/"/>   -->
-<!--     <mvc:resources mapping="/img/**" location="/img/"/>   -->
-    <mvc:default-servlet-handler />  
-<!--     ... -->
 		<!-- mysql -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -68,11 +60,4 @@
     <bean id="transactionManager"  class="org.springframework.orm.hibernate3.HibernateTransactionManager">  
         <property name="sessionFactory" ref="sessionFactory" />  
     </bean> 
-     
-    <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >  
-    	<property name="defaultEncoding" value="gbk"/> <!-- 默认编码 (ISO-8859-1) -->  
-    	<property name="maxInMemorySize" value="10240"/> 
-    	<property name="uploadTempDir" value="/temp/"/>
-    	<property name="maxUploadSize" value="-1"/> 
-	</bean>
 </beans>
